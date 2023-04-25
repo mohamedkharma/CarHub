@@ -1,5 +1,3 @@
-# CarHub
-Here you can post about cars
 # Web Development Final Project - *CarHub*
 
 Submitted by: **Mohamed Kharma**
