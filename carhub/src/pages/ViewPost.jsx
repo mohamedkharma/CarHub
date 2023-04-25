@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../components/Card';
+import './ViewPost.css'
 
 const ViewPost = (props) => {
 
@@ -59,8 +60,11 @@ const ViewPost = (props) => {
                 value={searchTerm}
                 onChange={handleSearch}
                 />
-                <button onClick={() => sortPosts('newest')}>Newest</button>
-                <button onClick={() => sortPosts('upVote')}>Most Upvoted</button>
+            </div>
+            <div className='buttons-container'>
+                <h3>Filter By: </h3>
+                <button className="button" onClick={() => sortPosts('newest')}>Newest</button>
+                <button className="button" onClick={() => sortPosts('upVote')}>Most Upvoted</button>
             </div>
             {filteredPosts.length > 0 ? (
                 filteredPosts.map((post) => (

@@ -40,3 +40,25 @@
 .read-the-docs {
   color: #888;
 }
+
+.post{
+  display:flexbox;
+  padding: 10px;
+  margin: 12px 20px 12px 20px;
+  justify-content: first baseline;
+  border: 1px solid;
+  border-radius: 2rem;
+  background-color: rgb(220, 212, 128);
+}
+
+.post h2{
+  font-family:'Arimo', sans-serif;
+  font-size: 20px;
+  color: navy;
+}
+
+.post p{
+  text-align: left;
+  font-family:'Arimo', sans-serif;
+  color: black;
+}

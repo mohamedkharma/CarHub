@@ -1,0 +1,60 @@
+.Card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .Card a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .Card h2.title {
+    font-size: 24px;
+    margin-top: 0;
+  }
+  
+  .Card h3 {
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+  
+  .Card h3.date {
+    color: #999;
+  }
+  
+  .Card h3.author {
+    color: #666;
+  }
+  
+  .Card .upvote {
+    font-size: 18px;
+    color: #333;
+    margin-top: 5px;
+  }
+  
+  .Card button {
+    font-size: 16px;
+    padding: 5px 10px;
+    background-color: #4f5b66;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .Card button.upvote {
+    color: #f60;
+  }
+  
+.Card a:hover,
+.Card h2.title:hover,
+.Card h3:hover,
+.Card .upvote:hover {
+  color: red;
+}
+

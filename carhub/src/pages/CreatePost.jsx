@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "../supabaseClient";
+import "./CreatePost.css"
 
 function CreatePost() {
     const [post, setPost] = useState({title: "", author: "", description: ""}); 
@@ -17,7 +18,7 @@ function CreatePost() {
         .select(); 
 
         alert("Post has been created"); 
-        window.location = "/";
+        window.location = "/posts";
     };
 
     const handleChange = (event) => {
@@ -32,25 +33,26 @@ function CreatePost() {
 
 
     return (
-        <div className="Crewmate">
-            <h1>Create a new Crewmate!</h1>
-            <form>
-                <label htmlFor="name">Title</label> <br />
-                <input type="text" id="title" name="title" value ={post.title} onChange={handleChange}/><br />
-                <br/>
-
-                <label htmlFor="speed">Author</label><br />
-                <input type="text" id="author" name="author" value ={post.author} onChange={handleChange} /><br />
-                <br/>
-
-                <label htmlFor="description">Description</label><br />
-                <textarea name="description" rows="5" cols="50" id="description" value ={post.description} onChange={handleChange}>
-                </textarea>
-                <br/>
-                <input type="submit" value="Submit" onClick={createPost}/>
-            </form>
+        <div className="Post">
+          <h1>Create a new Post!</h1>
+          <form>
+            <div className="form-field">
+              <label htmlFor="title">Title</label>
+              <input type="text" id="title" name="title" value={post.title} onChange={handleChange} />
+            </div>
+            <div className="form-field">
+              <label htmlFor="author">Author</label>
+              <input type="text" id="author" name="author" value={post.author} onChange={handleChange} />
+            </div>
+            <div className="form-field">
+              <label htmlFor="description">Description</label>
+              <textarea name="description" rows="5" cols="50" id="description" value={post.description} onChange={handleChange}></textarea>
+            </div>
+            <input type="submit" value="Submit" onClick={createPost} />
+          </form>
         </div>
-    )
+      )
+      
 
 }
 export default CreatePost;

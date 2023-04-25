@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { supabase } from "../supabaseClient";
+import "./EditPost.css"
 
 const EditPost = ({data}) => {
 
@@ -49,26 +50,25 @@ const EditPost = ({data}) => {
         });
     }
 
-
     return (
         <div className="Post">
-            <h1>Edit your Post!</h1>
-            <form>
-                <label htmlFor="name">Title</label> <br />
-                <input type="text" id="title" name="title" value ={post.title} onChange={handleChange}/><br />
-                <br/>
-
-                <label htmlFor="speed">Author</label><br />
-                <input type="text" id="author" name="author" value ={post.author} onChange={handleChange} /><br />
-                <br/>
-
-                <label htmlFor="description">Description</label><br />
-                <textarea name="description" rows="5" cols="50" id="description" value ={post.description} onChange={handleChange}>
-                </textarea>
-                <br />
-                <button className="updateButton" onClick={updatePost}>Update</button>
-                <button className="deleteButton" onClick={deletePost}>Delete</button>
-            </form>
+          <h1>Edit your Post!</h1>
+          <form>
+            <div className="form-field">
+              <label htmlFor="title">Title</label>
+              <input type="text" id="title" name="title" value={post.title} onChange={handleChange} />
+            </div>
+            <div className="form-field">
+              <label htmlFor="author">Author</label>
+              <input type="text" id="author" name="author" value={post.author} onChange={handleChange} />
+            </div>
+            <div className="form-field">
+              <label htmlFor="description">Description</label>
+              <textarea name="description" rows="5" cols="50" id="description" value={post.description} onChange={handleChange}></textarea>
+            </div>
+            <button className="update-button" onClick={updatePost}>Update</button>
+            <button className="delete-button" onClick={deletePost}>Delete</button>
+          </form>
         </div>
     )
 

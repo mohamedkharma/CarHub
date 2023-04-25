@@ -31,7 +31,7 @@ function App() {
       path: "/",
       element: <div className='App'>
               <h1>Welcome to the CarHub!</h1>
-              <h3>Here you can post about your Car</h3>
+              <h3>In this hub, you can post about your Car and share your experiences with others!</h3>
               </div>
     },
     {
